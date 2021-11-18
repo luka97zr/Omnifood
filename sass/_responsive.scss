@@ -1,0 +1,189 @@
+@media screen and (max-width: 900px){
+    div.header__main{
+        grid-template-columns: 1fr;
+        row-gap: 4rem;
+    }
+    div.header__main--content{
+        text-align: center;
+    }
+}
+@media  screen and(max-width:850px) {
+        div.featured__container--logos img{
+            height: 1.2rem;
+        }
+}
+@media screen and (max-width:550px){
+    div.how__content--grid{
+        grid-template-columns: 1fr;
+    }
+    div.how__img-box:nth-child(2){
+        grid-row: 1;
+    }
+    div.how__img-box:last-child{
+        grid-row: 5;
+
+    }
+}
+@media screen and (max-width:765px) {
+    div.recipes__content-grid{
+        grid-template-columns: 1fr 1fr;
+        column-gap: 3.4rem;
+            & div.diets{
+                grid-column: 1 / -1; //?
+                justify-self: center;
+            }
+    }
+}
+@media screen and (max-width:500px) {
+    div.recipes__content-grid{
+        grid-template-columns: 1fr;
+        
+    }
+}
+@media screen and (max-width:1150px) {
+    div.testemonials__content{
+        grid-template-columns: 1fr;
+    }
+    div.gallery{
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+@media screen and (max-width:990px) {
+    section.section__testemonials{
+        grid-template-columns: 1fr;
+    }
+    div.testemonials__content{
+        grid-template-columns: repeat(2,1fr);
+    }
+    div.gallery{
+        grid-template-columns: repeat(6,1fr);
+        padding: 3rem
+
+    }
+}
+@media screen and (max-width:660px) {
+    div.testemonials__content{
+        grid-template-columns:1fr;
+    
+    }
+    div.testemonials__container{
+        padding: 2.6rem;
+
+    }
+    div.gallery{
+        grid-template-columns: repeat(4,1fr);
+        padding: 3rem
+
+    }
+}
+@media screen and (max-width:850px) {
+    div.pricing__plans{
+        width: 100%;
+        gap: 2rem;
+    }
+}
+@media screen and (max-width:640px) {
+    div.pricing__plans{
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width:780px) {
+    div.plan__include--grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (max-width:550px) {
+    div.plan__include--grid{
+        grid-template-columns:1fr;
+    }
+}
+@media screen and (max-width:970px){
+    section.section__contact div.contact__container{
+        grid-template-columns: 1fr;
+    }
+    div.contact__content form.contact__form{
+        grid-template-columns: 1fr; 
+    }
+   div.contact__container div.contact__content{
+        padding: 4.5rem 3.5rem;
+
+    }
+    section.section__contact {
+        padding: 0; 
+    }
+    div.contact__img{
+        height: 32rem;
+        grid-row: 1;
+    }
+}
+@media screen and(max-width:890px) {
+    div.footer__container{
+        column-gap: 4rem;
+    }
+}
+@media screen and (max-width:750px) {
+    div.footer__container{
+        grid-template-columns: repeat(6,1fr);
+        column-gap:2rem
+            
+    }
+    div.footer__nav{
+        grid-row: 1;
+        grid-column: span 2;
+    }
+    div.logo_column, div.addres_column{
+        grid-column: span 3;
+    }
+    div.logo_column a img{
+        height: 1.5rem;
+    }
+}
+@media screen and (max-width: 990px) {
+    div.nav_burger{
+       display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    div.nav__menu{
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(10px);
+        width: 100%;
+        overflow: hidden;
+        transition: all .5s ease-in-out;
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%);
+    }
+    div.nav__menu.active {
+        transform: translateX(0);
+        opacity: 1;
+
+    }
+
+    ul.nav__links{
+        flex-direction: column;
+    }    
+    
+    //Menu btn lines
+
+    .nav_burger.active .menu_btn--lines::before {
+        transform: rotate(
+    45deg);
+    }
+    .nav_burger.active .menu_btn--lines::after {
+        transform: rotate(
+    -45deg);
+    }
+    .nav_burger.active .menu_btn--lines {
+        transform: translateX(-50%);
+        background: transparent;
+    }
+
+   
+}
