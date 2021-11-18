@@ -39,7 +39,6 @@ navIntersect.observe(header)
 //Section entering
 
 
-<<<<<<< HEAD
 const sectionReveal = function(entries,observe){
     const [entry] = entries;
     console.log(entry.target)
@@ -55,23 +54,6 @@ allSections.forEach(sec => {
     sec.classList.add('section_hide')
     revealSection.observe(sec)
 })
-=======
- const sectionReveal = function(entries,observe){
-     const [entry] = entries;
-    console.log(entry.target)
-    if(!entry.isIntersecting) return;
-     entry.target.classList.remove('section_hide')
-     }
-
-const revealSection = new IntersectionObserver(sectionReveal,{
-     root:null,
-     threshold:0.2
- })
- allSections.forEach(sec => {
-     sec.classList.add('section_hide')
-     revealSection.observe(sec)
- })
->>>>>>> 1d714866b03bc1ec2d3dbaf24454e351bb47b579
 
 burgerNav.addEventListener('click',()=>{
     navMenu.classList.toggle('active')
