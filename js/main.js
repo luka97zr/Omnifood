@@ -6,12 +6,18 @@ const navMenu = document.querySelector('.nav__menu');
 
 const allSections = document.querySelectorAll('.section')
 
+function clearClassActive(){
+    burgerNav.classList.remove('active')
+    navMenu.classList.remove('active')
+}
+
 //Navigation
 navLinks.addEventListener('click',function(e){
     e.preventDefault()
     if(e.target.classList.contains('nav__link')){
         const id = e.target.getAttribute('href');
         document.querySelector(id).scrollIntoView({behavior:'smooth'})
+        clearClassActive()
     }
 
 })
@@ -33,21 +39,21 @@ navIntersect.observe(header)
 //Section entering
 
 
-// const sectionReveal = function(entries,observe){
-//     const [entry] = entries;
-//     console.log(entry.target)
-//     if(!entry.isIntersecting) return;
-//     entry.target.classList.remove('section_hide')
-// }
+const sectionReveal = function(entries,observe){
+    const [entry] = entries;
+    console.log(entry.target)
+    if(!entry.isIntersecting) return;
+    entry.target.classList.remove('section_hide')
+}
 
-// const revealSection = new IntersectionObserver(sectionReveal,{
-//     root:null,
-//     threshold:0.2
-// })
-// allSections.forEach(sec => {
-//     sec.classList.add('section_hide')
-//     revealSection.observe(sec)
-// })
+const revealSection = new IntersectionObserver(sectionReveal,{
+    root:null,
+    threshold:0.2
+})
+allSections.forEach(sec => {
+    sec.classList.add('section_hide')
+    revealSection.observe(sec)
+})
 
 burgerNav.addEventListener('click',()=>{
     navMenu.classList.toggle('active')
